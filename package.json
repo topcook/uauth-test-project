@@ -1,6 +1,7 @@
 {
   "name": "web3modal",
   "version": "0.1.0",
+  "author": "topcook <97187853+topcook@users.noreply.github.com>",
   "private": true,
   "scripts": {
     "build": "react-scripts build",
