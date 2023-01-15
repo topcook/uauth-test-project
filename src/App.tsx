@@ -1,8 +1,8 @@
-import React, {useEffect} from 'react'
-import {useWeb3Modal} from './Web3ModalContext'
+import React, { useEffect } from 'react'
+import { useWeb3Modal } from './Web3ModalContext'
 
 const App: React.FC = () => {
-  const {connect, disconnect, isConnected, isLoading, address, error, user} =
+  const { connect, disconnect, isConnected, isLoading, address, error, user } =
     useWeb3Modal()
 
   const handleConnect = async () => {
@@ -28,6 +28,7 @@ const App: React.FC = () => {
       <>
         <div>Connected to {address}</div>
         <button onClick={handleLogout}>Logout</button>
+        <div>Unstoppable domain account: {user?.sub}</div>
       </>
     )
   }

@@ -1,6 +1,6 @@
 import type UAuthSPA from '@uauth/js'
 import * as UAuthWeb3Modal from '@uauth/web3modal'
-import React, {useContext, useEffect, useMemo, useState} from 'react'
+import React, { useContext, useEffect, useMemo, useState } from 'react'
 import Web3 from 'web3'
 import Web3Modal, {
   CLOSE_EVENT,
@@ -62,7 +62,7 @@ export const Web3ModalProvider: React.FC<Web3ModalProviderProps> = ({
 
   const uauth = useMemo(() => {
     console.log('New UAuth instance!')
-    const {package: uauthPackage, options: uauthOptions} =
+    const { package: uauthPackage, options: uauthOptions } =
       options.providerOptions!['custom-uauth']
     return UAuthWeb3Modal.getUAuth(uauthPackage, uauthOptions)
   }, [])
@@ -78,6 +78,7 @@ export const Web3ModalProvider: React.FC<Web3ModalProviderProps> = ({
 
       if (web3modal.cachedProvider === 'custom-uauth') {
         setUser(await uauth.user())
+        console.log("user domain:  ", (await uauth.user()).sub)
       }
 
       setProvider(provider)

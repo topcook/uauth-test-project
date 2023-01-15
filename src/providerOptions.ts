@@ -11,7 +11,7 @@ import {
 const uauthOptions: UAuthWeb3Modal.IUAuthOptions = {
   clientID: REACT_APP_CLIENT_ID!,
   redirectUri: REACT_APP_REDIRECT_URI!,
-  scope: 'openid wallet',
+  scope: 'openid wallet email profile:optional social:optional',
 }
 
 const providerOptions: IProviderOptions = {
